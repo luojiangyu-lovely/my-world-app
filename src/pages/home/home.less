@@ -1,0 +1,45 @@
+.menu {
+    margin: 0;
+    padding: 20px 0px;
+    text-align: left;
+
+    li {
+        width: 100%;
+        padding-left: 40px;
+        height: 46px;
+        line-height: 46px;
+        cursor: pointer;
+
+        div {
+            text-align: left;
+
+            i {
+                font-size: 16px;
+                font-weight: 600;
+                margin-right: 5px;
+            }
+        }
+
+        list-style: none;
+    }
+
+    li:hover {
+        // background-color: #d36a6c;
+        animation-name: big;
+        animation-duration: 0.5s;
+        animation-fill-mode:forwards
+    }
+   
+}
+.active{
+    background-color: #d36a6c;
+    font-size: 18px;
+}
+@keyframes big {
+    0% {
+        font-size: 16px;
+    }
+    100% {
+        font-size: 18px;
+    }
+}

@@ -1,18 +1,16 @@
 
-import './App.css';
-import { indexApi } from './request/apis/login';
-import { useEffect } from 'react';
+import { Switch, Route,Redirect } from 'react-router-dom'
+import Home from './pages/home/home'
+import Login from './pages/login'
 function App() {
-  useEffect(()=>{
-    indexApi.then(res=>{
-      console.log(res)
-    })
-  },[])
+
   return (
     <div className="App">
-      <header className="App-header">
-      1
-      </header>
+      <Switch>
+        <Route path='/login' component={Login}></Route>
+        <Route path='/Home' component={Home} ></Route>
+        {/* <Redirect to="/login" /> */}
+      </Switch>
     </div>
   );
 }
